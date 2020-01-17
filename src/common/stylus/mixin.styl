@@ -1,0 +1,73 @@
+// 背景图片
+bg-image($url)
+  background-image: url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url($url + "@3x.png")
+
+// 不换行
+no-wrap(n = 1)
+  display: -webkit-box
+  overflow: hidden
+  white-space: normal !important
+  text-overflow: ellipsis
+  word-wrap: break-word
+  -webkit-line-clamp: n
+  -webkit-box-orient: vertical
+
+// 扩展点击区域
+extend-click()
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -10px
+    left: -10px
+    right: -10px
+    bottom: -10px
+
+clearfix()
+  &:before, &:after
+    content ''
+    display table
+  &:after
+    clear both
+m-wrapper()
+  width 100%
+  padding-left 10px
+  padding-right 10px
+mobile-wrapper()
+  padding-top 50px
+  padding-bottom 70px
+blink($color1,$color2)
+  background: linear-gradient(left, $color1, $color2)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  animation:scratchy 0.3s linear forwards infinite
+@keyframes  scratchy
+  0%
+    background-position: 0 0
+
+  25%
+    background-position: 0 0
+
+  26%
+    background-position: 20px -20px
+
+  50%
+    background-position: 20px -20px
+
+  51%
+    background-position: 40px -40px
+
+  75%
+    background-position: 40px -40px
+
+  76%
+    background-position: 60px -60px
+
+  99%
+    background-position: 60px -60px
+
+  100%
+    background-position: 0 0
+

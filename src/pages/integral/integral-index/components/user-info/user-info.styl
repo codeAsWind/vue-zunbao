@@ -1,0 +1,70 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+$circle = 75px
+.user-info
+  background $color-light
+  height 460px
+  width 330px
+  padding 20px
+  flex 0 0 330px
+  .title
+    font-size 18px
+    font-weight 600
+  .is-logOut
+    clearfix()
+    text-align center
+    height 190px
+    margin-top 20px
+    .avator
+      margin 20px auto
+      width $circle
+      height $circle
+      border-radius 50%
+      background #999
+      text-align center
+      line-height $circle
+      i
+        font-size 40px
+        color $color-light
+    p
+      margin-bottom 20px
+  .is-login
+    .avator
+      margin 20px 0
+      img
+        width 65px
+        margin-right 20px
+      span
+        font-size 18px
+    .points
+      margin-bottom 20px
+      span
+        font-size 20px
+  .bottom
+    padding-top 20px
+    margin-top 20px
+    border-top 1px solid $color-border-gray
+    .tit
+      display flex
+      justify-content space-between
+      h3
+        font-size 16px
+        font-weight 600
+      a
+        extend-click()
+  .welfare
+    display flex
+    justify-content space-between
+    text-align center
+    i
+      display block
+      width $circle
+      height $circle
+      line-height $circle
+      font-size 40px
+      border-radius 50%
+      background $color-intersperse
+      color $color-light
+      margin-bottom 15px
+      margin-top 20px
+

@@ -1,0 +1,221 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+$radius = 5px
+$nav-height = 90px
+$top-height = 50px
+.top
+  font-size 14px
+  height $top-height
+  background $color-light
+  .top-wrapper
+    display flex
+    justify-content space-between
+    height $top-height
+    transform scale()
+  .notice
+    position relative
+    width 400px
+    line-height $top-height
+    padding-right 15px
+    a
+      margin-right 10px
+    i.arrow
+      position absolute
+      right -10px
+      top 0
+    .notice-sub
+      position absolute
+      z-index 9999
+      top $top-height
+      left 0
+      width 100%
+      padding 20px
+      background #eee
+      line-height 28px
+      .item
+        border-bottom 1px solid $color-border-gray
+        margin-bottom 10px
+        padding-bottom 5px
+        &:last-child
+          border 0
+      h3
+        display flex
+        justify-content space-between
+        span
+          font-weight 600
+      a
+        color $color-light
+  .top-right-wrapper
+    display flex
+    align-items center
+    &.is-logOut form > *
+      margin 0 5px
+    input
+      width 150px
+      line-height 30px
+      border 0
+      background $color-intersperse
+      color $color-light
+      border-radius $radius
+    input:
+    :-webkit-input-placeholder
+      color $color-light
+    .register-btn
+      background $color-danger
+      color $color-light
+    a
+      transition all .3s ease-in
+      &:hover
+        opacity .8
+    &.is-login
+      line-height $top-height
+      .split
+        display block
+        width 1px
+        height 25px
+        margin 0 10px
+        background-image: linear-gradient(to bottom, transparent, #666, transparent)
+      .sub-menu
+        display none
+        &:after
+          content ''
+          position absolute
+          top -10px
+          left 50%
+          margin-left -5px
+          border 5px solid transparent
+          border-bottom-color #eee
+        position absolute
+        z-index 999
+        top $top-height
+        left 0
+        min-width 120px
+        width 100%
+        background #eee
+      .account
+        position relative
+        &:hover .sub-menu
+          display block
+        .sub-menu
+          a
+            display block
+            padding-left 20px
+            &:hover
+              background $color-intersperse
+              color $color-light
+            i
+              margin-right 5px
+
+      .sign
+        position relative
+        .sub-menu
+          width 130px
+          text-align center
+        &:hover .sub-menu
+          display block
+          left 50%
+          top $top-height
+          margin-left -65px
+
+      .user-center-btn
+        background $color-intersperse
+        color #fff
+      .msg
+        position relative
+    &.agent-header
+      & > span, & > a, & > button
+        margin-right 10px
+        line-height $top-height
+        position relative
+
+    .badge
+      width: 10px
+      height: 10px
+      background: red
+      position: absolute
+      border-radius: 10px
+      right: -5px
+      top: 10px
+    .refresh
+      cursor pointer
+      margin-left 5px
+  .scale-big
+    transform scale(2)
+    display inline-block
+    margin-left 5px
+.nav
+  height: $nav-height
+  background $color-nav-background
+  .logo img
+    padding-top 14px
+  .main-nav
+    float right
+    & > li
+      float left
+      position relative
+      a
+        display block
+        padding 0 20px
+        color $color-light
+        transition all .3s ease-in
+        line-height $nav-height
+        font-size 16px
+        &.active, &:hover
+          background $color-intersperse
+        img.hot
+          vertical-align middle
+          margin-right 6px
+          margin-top -10px
+        img.new
+          margin-right 6px
+      &:hover .sub-nav
+        height 109px
+      &:hover .sub-nav-download
+        height 172px
+      .sub-nav
+        position absolute
+        z-index 999
+        left -200px
+        background rgba(0, 0, 0, .7)
+        width 1100px
+        height 0
+        overflow hidden
+        display flex
+        border-radius 0 0 20px 20px
+        transition all .3s ease-in
+        a
+          flex 1
+          line-height 30px
+          text-align center
+          padding 12px 0
+          .icon-box
+            height 55px
+          span
+            display block
+
+      .sub-nav-download
+        position absolute
+        z-index 999
+        top $nav-height
+        right 0
+        background rgba(0, 0, 0, .7)
+        height 0
+        overflow hidden
+        border-radius 0 0 20px 20px
+        transition all .3s ease-in
+        .wr
+          padding 20px
+          p
+            color $color-light
+            text-align center
+            padding-bottom 15px
+            i
+              font-size 22px
+            i:first-child
+              margin-right 20px
+    .icon-arrow-nav
+      margin-left 5px
+
+.color-intersperse
+  color $color-intersperse

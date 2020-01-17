@@ -1,0 +1,53 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+$color = #09affe
+$color = $color-primary
+.register
+  border 1px solid #dcdcdc
+  background $color-light
+  padding 40px 50px
+  line-height 28px
+  font-size 14px
+  margin 20px auto
+  position relative
+  .header
+    h2
+      font-size 36px
+      color $color
+      margin-bottom 15px
+  .form h3
+    line-height: 38px
+    font-size: 18px
+    color $color
+  .account-info
+    padding 20px 0
+    margin 20px 0
+    border-top 1px dashed #b1b1b1
+    border-bottom 1px dashed #b1b1b1
+  .input-group
+    .label, label
+      flex 0 0 70px
+      width 70px
+      span
+        color $color-danger
+    input
+      margin 0 15px
+    .danger
+      color $color-danger
+    .checkbox
+      display flex
+      margin-bottom 10px
+      input
+        margin-top 8px
+
+  .register-btn
+    color $color-light
+    background $color
+    border 1px solid  $color
+    width 200px
+    margin 0 10px
+.app-adv
+  position absolute
+  bottom 108px
+  right 20px
+  width 400px

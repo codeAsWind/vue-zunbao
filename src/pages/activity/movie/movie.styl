@@ -1,0 +1,66 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+.banner
+  height 400px
+
+.movie-wrapper
+  font-size 16px
+  line-height 32px
+  & > div
+    padding 50px 0
+  .why-watch-movie
+    h2
+      margin 50px 0
+      color $color-primary
+      font-size 24px
+      font-weight 600
+  .common-list
+    background #f1f8ff
+    &.good-movie
+      padding-top 0
+      .item .bottom
+        display block
+        text-align center
+    .title
+      font-size 20px
+      font-weight 600
+      color $color-dark
+      padding-left 20px
+      margin-bottom 20px
+    .item-list
+      clearfix()
+    .item
+      float left
+      width 199px
+      margin 0 20px
+      transition all .3s ease-in
+      &:hover
+        transform translate3d(0,-2px,0)
+        box-shadow 0 0 15px $color-text
+      img
+        width 100%
+      .name
+        font-size 14px
+        background $color-nav-background
+        text-align center
+        color $color-light
+      .bottom
+        line-height 70px
+        padding 0 20px
+        display flex
+        justify-content space-between
+        align-items center
+        background $color-light
+        .point
+          font-size 24px
+
+  .movie-tip
+    padding-left 20px
+
+.movie-title
+  font-size 18px
+  margin-bottom 15px
+
+.el-date-editor.el-input .el-input__icon
+  margin-top 0

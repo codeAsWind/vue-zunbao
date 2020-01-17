@@ -1,0 +1,71 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+$color = #09affe
+$color = $color-primary
+
+.welcome
+  border 1px solid #dcdcdc
+  background $color-light
+  padding 40px 50px
+  line-height 28px
+  font-size 14px
+  margin 20px auto
+  .header
+    h2
+      font-size 36px
+      color $color
+      margin-bottom 15px
+  .new-one
+    padding 20px 0
+    margin 20px 0
+    border-top 1px dashed #ddd
+    border-bottom 1px dashed #ddd
+    h3
+      font-size 24px
+      padding-bottom 15px
+    .item-list
+      clearfix()
+    .item
+      float left
+      width 344px
+      height 150px
+      border 1px solid #ddd
+      margin 0 30px 30px 0
+      text-align center
+      transition all .3s ease-in
+      &:nth-of-type(3n)
+        margin-right 0
+      &:hover
+        border-color $color-danger
+        transform translate3d(0,-2px,0)
+      h3
+        color $color
+        margin-top 20px
+        padding-bottom 5px
+      a
+        width 200px
+      p
+        margin 0 auto 5px auto
+
+  .download
+    display flex
+    justify-content space-between
+    h3
+      font-size 24px
+      padding-bottom 15px
+    .official
+      font-size 16px
+    a
+      margin-left 10px
+      font-size 14px
+  .ewm-box
+    clearfix()
+    text-align center
+    div
+      float left
+      background $color
+      color $color-light
+      padding 5px
+      margin-right 20px
+      img
+        width 140px

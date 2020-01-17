@@ -1,0 +1,295 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+$offset = 10px
+.banner-link
+  display block
+  height 100%
+
+.el-carousel__indicators
+  bottom 40px
+
+.main-index-wrapper
+  margin-top -30px
+  position relative
+  z-index 2
+  clearfix()
+  .jackpot-wrapper
+    display flex
+    align-items center
+    padding 0 20px
+    height 140px
+    background #cacdd7
+    img
+      margin-right 100px
+  .main-block
+    margin 20px 0
+    clearfix()
+  .left-nav-block
+    float left
+    width 190px
+    background #303554
+    color $color-light
+    a
+      display block
+      border-bottom 1px solid #383f65
+      line-height 49px
+      padding-left 30px
+      color $color-light
+      font-size 16px
+      position relative
+      &:hover
+        background $color-primary
+      i.icon
+        margin-right 10px
+        font-size 18px
+      .icon-badge
+        position absolute
+        left 0
+        top -9px
+        color $color-danger
+        font-size 30px
+
+    .zb-app-download
+      padding 10px 0
+      text-align center
+      img
+        width 100%
+  .right-game-block
+    float left
+    margin-left 20px
+    .item
+      clearfix()
+    .mask
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      background rgba(47, 52, 82, 0.7)
+      text-align center
+      color $color-light
+      opacity 0
+      transition all .3s ease-in
+      a
+        color $color-light
+      img
+        margin-top 30px
+      h3
+        height 90px
+        line-height 90px
+        font-size 18px
+        font-weight 600
+      .text
+        width 70%
+        margin 30px auto
+        padding 20px 0
+        border-bottom 1px solid #bbb
+        border-top 1px solid #bbb
+        line-height 28px
+
+    .big:hover .mask, .small-item:hover .mask
+      opacity 1
+    .big-box
+      float left
+      font-size 16px
+    .big
+      float left
+      width 390px
+      height 317px
+      overflow hidden
+      position relative
+      margin-right 10px
+      cursor pointer
+      &:last-child .mask
+        .text
+          padding 5px 0
+          margin-bottom 10px
+        .sb-p
+          margin-bottom 10px
+
+    .small-box
+      float left
+      width 190px
+      .small-item:last-child
+        margin-top 13px
+
+    .small-item
+      position relative
+      height 152px
+      width 190px
+      overflow hidden
+      float left
+      cursor pointer
+      .mask
+        h3
+          img
+            margin-top 0
+    .item-02
+      margin-top 10px
+      .small-item:not(:last-child)
+        margin-right 10px
+  .recommend-game
+    .title
+      margin-bottom 10px
+      display flex
+      justify-content space-between
+      align-items center
+    .more
+      font-size 16px
+      i
+        margin-right 2px
+        color $color-primary
+
+.advantage
+  margin 20px 0
+  height 415px
+  background url("./img/i-b-mask.jpg") no-repeat center
+  position relative
+  cursor: pointer
+  .arrow
+    position absolute
+    left 50%
+    top 250px
+    margin-left -44px
+    padding 20px
+    animation: downUp .9s ease infinite alternate
+
+  .el-carousel__indicators
+    bottom 380px
+  .el-carousel__indicators--labels .el-carousel__button
+    font-size: 14px
+
+
+.banner-wrapper
+  position relative
+
+.sidebar-wrapper
+  position absolute
+  z-index 100
+  top 2%
+  right 60px
+  width: 246px
+  height: 367px
+  background: url(./img/sider-bg.png) no-repeat bottom center
+  .duck
+    position: relative
+    display: block
+    width: 266px
+    height: 227px
+    overflow: hidden
+    background: url(./img/cat.png) no-repeat
+    transition: none
+    animation: da 1.3s step-end infinite
+  .text-link
+    text-align center
+    line-height 60px
+    p
+      width 75%
+      margin 0 auto
+      border-bottom 1px solid
+      &:last-child
+        border 0
+        span
+          background $color-light
+          b
+            blink(#f71605, #e0f513)
+            font-weight 600
+      span
+        background teal
+        color $color-light
+        font-size 12px
+        border-radius 10px
+        padding 2px 6px
+        margin-right 10px
+      a
+        color $color-light
+        font-size 16px
+
+.index-alert-mask
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 99999
+  background rgba(0, 0, 0, .7)
+  .index-alert-wrapper
+    clearfix()
+    position: relative
+    background: url(https://support.qnappzb01.com/img/index/index-alert-bg2.png) no-repeat center
+    width: 814px
+    height: 692px
+    background-size: contain
+    top 0
+    left 50%
+    margin-left -407px
+    .index-alert-content
+      margin 0 auto
+      margin-top 350px
+      width 600px
+    //border 1px solid red
+    .index-alert-msg-box
+      font-size 15px
+      line-height 34px
+      height 170px
+      overflow hidden
+    .index-alert-tips
+      color $color-light
+      //border 1px solid red
+      width 470px
+      height 96px
+      margin-top 43px
+      overflow hidden
+      line-height 24px
+  .close-btn
+    position absolute
+    right 80px
+    top 182px
+    color $color-light
+    font-size 40px
+    cursor pointer
+
+.opacity-enter-active, .opacity-leave-active
+  transition all .5s
+
+.opacity-enter, .opacity-leave-to
+  opacity 0
+
+@keyframes da {
+  0% {
+    background-position: 7px 0
+  }
+  12.5% {
+    background-position: 7px -247px
+  }
+  25% {
+    background-position: 7px -494px
+  }
+  37.5% {
+    background-position: 7px -741px
+  }
+  50% {
+    background-position: 7px -988px
+  }
+  62.5% {
+    background-position: 7px -1235px
+  }
+  75% {
+    background-position: 7px -1482px
+  }
+  87.5% {
+    background-position: 7px -1729px
+  }
+  100% {
+    background-position: 7px 0
+  }
+}
+
+@keyframes downUp {
+  0% {
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    transform: translate3d(0, 20px, 0);
+  }
+}

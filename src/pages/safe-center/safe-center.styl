@@ -1,0 +1,95 @@
+@import '~common/stylus/variable'
+.banner
+  height: 440px
+  background url("./img/safecenter-bg.jpg") no-repeat center
+
+
+.safe-center-wrapper
+  border-radius 20px
+  overflow hidden
+  margin-top -60px
+  background #fff
+  padding-bottom 60px
+  margin-bottom 30px
+  min-height 503px
+
+.tab
+  width 100%
+  line-height 60px
+  background $color-primary
+  display flex
+
+  a
+    flex 1
+    text-align center
+    color #fff
+    font-size 20px
+    position relative
+    &.active
+      color $color-intersperse
+    &:not(:last-child):after
+      content ''
+      position absolute
+      right 0
+      top 18px
+      width 2px
+      height 24px
+      background #fff
+
+.tab-content
+  padding-top 20px
+  .item
+    display flex
+    align-items center
+    justify-content space-between
+    width 900px
+    margin 0 auto
+    border-bottom 1px solid #ddd
+    padding 30px 0
+    line-height 30px
+    .sub
+      display flex
+      align-items center
+      i
+        font-size 30px
+        margin-right 10px
+      h4
+        color $color-primary
+        font-size 18px
+
+.input-group
+  padding-left 300px
+  display flex
+  align-items center
+  margin:15px 0
+  line-height 30px
+  .tab-header
+    a
+      width auto
+      margin 5px
+      padding 0 12px
+      &.active,&:hover
+        background $color-intersperse
+        color $color-light
+  label
+    width 160px
+    text-align right
+  input
+    width 240px
+  .tit
+    p
+      margin-bottom 15px
+      color $color-primary
+    h3
+      color $color-danger
+      span
+        font-size 16px
+        font-weight 600
+        margin-right 20px
+  .link
+    padding-top 6px
+    display inline-block
+.codeImage
+  height 30px
+  margin-left 5px
+  border-radius 5px

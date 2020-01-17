@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扫码支付</title>
+</head>
+<style>
+  .wrapper {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .wrapper h3 {
+    font-size: 24px;
+  }
+
+  #QRCode {
+    margin-left: 40px
+  }
+
+</style>
+<body>
+<div class="wrapper">
+  <div>
+    <h3>请扫描下面的二维码进行支付</h3>
+    <div id="QRCode"></div>
+  </div>
+</div>
+
+<script src="./qrcode.js"></script>
+<script>
+  function getQueryString(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  var data = ''
+  try {
+    data = getQueryString('query')
+  } catch (err) {
+    data = decodeURIComponent((window.location.href.split('query=')[1]).replace(/\+/g, ' '))
+  }
+  new QRCode(document.querySelector('#QRCode'), {
+    text: data,
+    width: 220,
+    height: 220
+  })
+</script>
+</body>
+</html>

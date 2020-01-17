@@ -1,0 +1,118 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.welfare
+  background url("./img/wf-bg.jpg") no-repeat center
+  background-size cover
+  height 1070px
+  clearfix()
+  .item-list
+    width 800px
+    height 800px
+    margin 200px 0 0 400px
+    position relative
+    .item
+      background-size: contain
+      position absolute
+      cursor: pointer
+      &:hover
+        animation jello 2s infinite
+    .shoucun
+      left 0
+      top 0
+      width 200px
+      height 200px
+      background: url('./img/fw-1.png') no-repeat
+    .sign
+      right 0
+      top 50px
+      width 140px
+      height 200px
+      background: url('./img/fw-2.png') no-repeat
+    .intergal
+      left 230px
+      top 120px
+      width 200px
+      height 200px
+      background: url('./img/fw-3.png') no-repeat
+    .vip
+      left 100px
+      top 300px
+      width 120px
+      height 200px
+      background: url('./img/fw-4.png') no-repeat
+    .redPacket
+      left 450px
+      top 300px
+      width 150px
+      height 200px
+      background: url('./img/fw-5.png') no-repeat
+    .handsel
+      left 330px
+      top 450px
+      width 150px
+      height 200px
+      background: url('./img/fw-6.png') no-repeat
+    .film
+      left 400px
+      top 620px
+      width 180px
+      height 200px
+      background: url('./img/fw-7.png') no-repeat
+    .limitTime
+      left 50px
+      top 550px
+      width 140px
+      height 200px
+      background: url('./img/fw-8.png') no-repeat
+
+  .center-btn
+    margin-top 15px
+  .table
+    table
+      margin 10px 0
+  .dialog-body
+    line-height 26px
+
+@keyframes jello {
+  from,
+  11.1%,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}

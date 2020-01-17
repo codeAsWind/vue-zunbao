@@ -1,0 +1,70 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.site-map
+  background url(./img/b-bg.jpg) no-repeat center top
+  background-size cover
+  .btn-center
+    padding-top 350px
+    width 100%
+    display flex
+    justify-content center
+
+  .lines
+    margin-top 50px
+    display flex
+    justify-content space-between
+    .item
+      flex 1
+      margin 0 10px
+    .response
+      padding-bottom 20px
+      font-size 24px
+    .entry-btn
+      color $color-light
+      border-color $color-light
+      display block
+      margin 20px auto
+      width 180px
+    a
+      text-align center
+      color $color-light
+      .circle
+        border 1px solid $color-light
+        width 180px
+        height 180px
+        border-radius 50%
+        text-align center
+        padding-top 60px
+        font-size 18px
+        span
+          display inline-block
+          font-size 40px
+          padding-bottom 10px
+
+  .other
+    text-align center
+    margin-top 30px
+    padding-bottom 100px
+
+@media screen and (max-width:767px)
+
+  .site-map
+    background url(./img/bg.jpg) no-repeat center top
+    background-size cover
+    clearfix()
+    .title
+      margin-top 30px
+      margin-bottom 10px
+      font-size 30px
+      color $color-light
+    .btn-center
+      padding-top 20px
+    .lines
+      display block
+      .item
+        display flex
+        justify-content center
+        margin-bottom 25px
+  .other
+    img
+      width 100%

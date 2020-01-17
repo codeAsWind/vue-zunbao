@@ -1,0 +1,42 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.red
+  color $color-danger
+
+.banner
+  height: 400px
+  background url("./img/promotion-bg.jpg") no-repeat center
+  background-size cover
+
+.promotions
+  .item
+    border-bottom 2px dashed #ccc
+    padding-bottom 20px
+    margin-bottom 20px
+    font-size 14px
+    .thumb
+      clearfix()
+      cursor pointer
+      &:hover .pic img
+        transform scale(1.05)
+        opacity .9
+      .pic
+        float left
+        margin-right 15px
+        overflow hidden
+        border-radius 10px
+        img
+          transition all .3s ease-in
+      .text
+        float left
+        width 565px
+        line-height 32px
+        h3
+          font-size 18px
+          color $color-danger
+        .opacity
+          opacity .8
+      .detail-button
+        margin-top 12px
+
+           

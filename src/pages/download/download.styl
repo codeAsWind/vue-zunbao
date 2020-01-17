@@ -1,0 +1,54 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.download
+  height 1150px
+  background url('./img/dl-bg.jpg') no-repeat center
+  background-size cover
+  font-size 16px
+  .item-list
+    clearfix()
+    border 6px solid $color-light
+  .item
+    float left
+    &.active .sub
+      width 460px
+    .title-bar
+      cursor pointer
+      float left
+      width 104px
+      border-right 1px solid $color-light
+      overflow hidden
+      &.last-child
+        border-right 0
+      img
+        width 100%
+        transition all .3s ease-in
+      &:hover img
+        transform scale(1.05)
+
+    .sub
+      background $color-gray-background
+      float left
+      width 0
+      height 326px
+      overflow hidden
+      transition all .2s ease-in
+      &>.wr
+        padding 25px
+      h3
+        font-size 18px
+        color $color-dark
+        font-weight 600
+      .download-text
+        margin 20px 0
+      .ewm
+        padding 0 20px
+        display flex
+        justify-content space-between
+        align-items center
+        text-align center
+        p
+          margin-top 10px
+.top-part
+  .zb-app
+    margin 50px

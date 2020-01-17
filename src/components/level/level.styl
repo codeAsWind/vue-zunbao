@@ -1,0 +1,85 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.title
+  margin 90px 0 30px 30px
+  position relative
+  .line
+    width 792px
+    height 8px
+    background #cccccc
+    position absolute
+    top 10px
+    left 3px
+    z-index 100
+    transition all 1s ease-in
+    &.current-line
+      background $color-primary
+  .items
+    clearfix()
+    .item
+      &:last-child
+        width 0
+      float left
+      width 130px
+      position relative
+      .level-img-wrapper
+
+        width 160px
+        position absolute
+        top -75px
+        left -70px
+        z-index 100
+        text-align center
+        img
+          width 70px
+
+      .tit
+        position: absolute
+        top: 30px
+        left: -55px
+        padding: 4px 12px
+        min-width: 126px
+        border-radius: 10px
+        background $color-primary
+        color $color-light
+      .dot
+        position relative
+        z-index 999
+        display block
+        margin-top 6px
+        line-height 16px
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background: #cccccc
+        &.active
+          background $color-primary
+      &:hover
+        .sub
+          opacity 1
+          transform translate3d(0,45%,0)
+      .sub
+        transition all .3s ease-in
+        opacity 0
+        transform translate3d(0,100%,0)
+        background $color-primary
+        color #fff
+        padding 10px 20px
+        border-radius 5px
+        position absolute
+        width 160px
+        font-size 14px
+        top: -318px
+        left: -61px
+        text-align center
+        line-height 27px
+
+        &:after
+          content ''
+          position absolute
+          bottom -20px
+          left 60px
+          height 0
+          width 0
+          border 10px solid transparent
+          border-top-color $color-primary

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>存款支付</title>
+</head>
+<body>
+<script>
+  function getQueryString(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  var data = null
+  try {
+    data = JSON.parse(getQueryString('query'))
+  } catch (err) {
+    data = JSON.parse(decodeURIComponent((window.location.href.split('query=')[1]).replace(/\+/g,' ')))
+  }
+  var params = data.params
+  var url = data.url
+  var form = document.createElement('form')
+  form.action = url
+  form.method = 'post'
+  for (var key in params) {
+    var input = document.createElement('input')
+    input.type = 'hidden'
+    input.name = key
+    input.value = params[key] || ''
+    form.appendChild(input)
+  }
+  document.querySelector('body').appendChild(form)
+  document.querySelector('form').submit()
+</script>
+</body>
+</html>

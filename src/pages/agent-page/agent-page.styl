@@ -1,0 +1,154 @@
+@import '~common/stylus/variable'
+$color = #09affe
+.red
+  color red
+
+.agent
+  .el-carousel__indicators
+    bottom 0
+  .el-carousel__indicators--labels .el-carousel__button
+    padding: 6px 32px
+    font-size: 16px
+  .caption
+    width 1200px
+    margin 150px auto 0
+    h1
+      color: #96551e
+      font-weight: 700
+      font-size: 60px
+      line-height: 74px
+    h3
+      font-size: 36px
+      color: #96551e
+      padding: 30px 0
+  .el-carousel__item
+    &:nth-child(2n) .caption
+      text-align right
+
+  .register-content
+    .header
+      color $color
+      h2
+        font-size 22px
+        color $color
+        font-weight normal
+    .form h3
+      line-height: 38px
+      font-size: 18px
+      color $color
+    .account-info
+      padding 20px 0
+      margin 20px 0
+      border-top 1px dashed #b1b1b1
+      border-bottom 1px dashed #b1b1b1
+    .input-group
+      .agree-special
+        margin-top 10px
+        display flex
+        align-items flex-start
+        p
+          margin-top -7px
+          margin-bottom 0
+          margin-left 5px
+  .contact-content
+    .contact
+      margin-bottom 20px
+      p
+        margin 0
+      span:first-child
+        color $color-primary
+        font-weight 600
+    .qq
+      margin-right 5px
+    .question
+      span:first-child
+        color $color-intersperse
+.compose
+  line-height 28px
+  h3, h2
+    color $color-primary
+    font-weight 600
+  h2
+    font-size 18px
+  p
+    margin-bottom 15px
+
+  .table
+    text-align center
+    margin-bottom 20px
+    table.agent-table
+      width 100%
+    td
+      padding 10px
+      background #eee
+      border 1px solid #fff
+      vertical-align middle
+    thead
+      td
+        background $color-nav-background
+        color $color-light
+        min-width 100px
+    tfoot
+      td
+        background $color-nav-background
+        color #fff
+  &.dialog-body
+    height 600px
+    overflow-y: auto
+  .icons
+    display flex
+    & > div
+      flex: 1
+      text-align center
+      span
+        display inline-block
+        width 100px
+        height 100px
+        line-height 100px
+        background #ddd
+        border-radius 50%
+        i
+          font-size 40px
+          color $-color-light-bg
+
+.item-list
+  margin-bottom 15px
+  .title
+    display flex
+    justify-content space-between
+    padding 0 20px
+    line-height 50px
+    background #eee
+    border-bottom 2px solid #ccc
+    .num
+      display inline-block
+      vertical-align middle
+      width 26px
+      height 26px
+      line-height 26px
+      border-radius 50%
+      background #ccc
+      color #666
+      text-align center
+      margin-right 10px
+  &.active
+    border-bottom 2px solid $color-primary
+    .title
+      transition all .3s ease-in
+      background $-color-light-bg
+      color #fff
+      .num
+        background #fff
+        color #666
+    .sub
+      height auto
+  .sub
+    transition all .3s ease-in
+    height 0
+    overflow hidden
+    background #eee
+    p
+      margin 20px
+      color #666
+
+

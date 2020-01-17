@@ -1,0 +1,29 @@
+.slide-fade-enter-active
+  transition: all .3s ease
+
+.slide-fade-leave-active
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+
+.slide-fade-enter, .slide-fade-leave-to
+  transform: translateY(-10px)
+  opacity: 0
+
+//过渡属性
+.opacity-enter-active, .opacity-leave-active
+  transition all .3s ease-in
+
+.opacity-enter, .opacity-leave-to
+  opacity 0
+  transform translate3d(5px, 0, 0)
+
+.slider-left-enter-active, .slider-left-leave-active,
+.slider-right-enter-active, .slider-right-leave-active
+  transition all .3s ease-in
+
+.slider-left-enter, .slider-left-leave-to
+  opacity 0
+  transform translate3d(-100%, 0, 0)
+
+.slider-right-enter, .slider-right-leave-to
+  opacity 0
+  transform translate3d(100%, 0, 0)

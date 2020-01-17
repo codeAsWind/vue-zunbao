@@ -1,0 +1,87 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.lucky-lottery
+  width: 420px
+  height: 465px
+  background: url(./img/lucky-b.gif) no-repeat
+  background-size: 100%
+  clearfix()
+  .lotto-box
+    width: 375px
+    height: 309px
+    position: relative
+    margin: 52px 0 0 26px
+    img
+      height: 60px
+      width: auto
+      max-width: 100%
+    .lotto-item
+      position: absolute
+      width: 116px
+      height: 105px
+      padding: 10px 5px 0
+      overflow: hidden
+      text-align: center
+      background: #fff
+      border-radius 14px
+      box-shadow: 0 10px 0 #f3f1ee
+
+    .lotto-btn
+      transition: all .3s
+      cursor: pointer
+
+    .lotto-item:nth-of-type(2)
+      top: 0
+      left: 125px
+
+    .lotto-item:nth-of-type(3)
+      top: 0
+      left: 250px
+
+    .lotto-item:nth-of-type(4)
+      top: 124px
+      left: 250px
+
+    .lotto-item:nth-of-type(5)
+      top: 248px
+      left: 250px
+
+    .lotto-item:nth-of-type(6)
+      top: 248px
+      left: 125px
+
+    .lotto-item:nth-of-type(7)
+      top: 248px
+      left: 0
+
+    .lotto-item:nth-of-type(8)
+      top: 124px
+      left: 0
+
+    .lotto-item.active
+      background: #ffe871
+      box-shadow: 0 6px 0 #ffb55b
+      //color: #fff
+
+    .lotto-item p
+      line-height: 24px
+      -o-text-overflow: ellipsis
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+      margin-top: 7px
+
+    .lotto-btn
+      top: 124px
+      left: 125px
+      background: #f8b551
+      background-size: 1rem 1rem
+      box-shadow: 0 10px 0 #efa63a
+      transition: all .3s
+      display flex
+      justify-content center
+      align-items center
+      color $color-light
+      h3
+        font-size 20px
+

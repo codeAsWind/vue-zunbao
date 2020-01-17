@@ -1,0 +1,128 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+.exchangePage
+  padding-bottom 30px
+  .header
+    margin 20px 0
+  .main
+    background #fff
+    padding 20px
+    h3
+      margin-bottom 15px
+      font-weight 600
+  .address-list
+    margin-bottom 20px
+    clearfix()
+    .item
+      position: relative
+      float: left
+      width: 270px
+      height: 149px
+      background: url(./img/add-address-bg.jpg) no-repeat 0 -154px
+      margin: 0 20px 20px 0
+      padding: 15px
+      cursor: pointer
+      font-size 14px
+      &:hover
+        i.delete
+          opacity 1
+      &.active
+        background-position: 0 0
+        &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          right: 0
+          width: 30px
+          height: 30px
+          background: url(./img/active.png)
+
+      & > div
+        display flex
+      .tit
+        margin-bottom 10px
+        padding-bottom 10px
+        border-bottom 1px solid #ddd
+      .body
+        margin-bottom 10px
+        line-height 21px
+        p
+          no-wrap(2)
+      .bottom
+        align-items center
+        position: absolute
+        bottom: 15px
+        left: 15px
+        a
+          margin-left: 10px
+          color: #00bfff
+          transition: .3s
+          opacity: .7
+          padding: 6px
+      i
+        margin-right 5px
+      .delete
+        opacity 0
+        position: absolute
+        right: -14px
+        top: -12px
+        width: 24px
+        height: 24px
+        line-height: 24px
+        text-align: center
+        font-size: 24px
+        background: $color-danger
+        color: #fff
+        border-radius: 50%
+        transition: all .3s
+    .add-addr
+      width: 270px
+      height: 149px
+      float: left
+      border: 5px solid #ddd
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 16px
+      color: #00bfff
+      cursor: pointer
+      transition: .3s
+      opacity: .7
+      i
+        margin-right: 5px
+        font-weight: 700
+        margin-top: 2px
+        font-size 24px
+  .exchangeProductInfo
+    .table
+      font-size 14px
+      width 100%
+      text-align center
+      border 1px solid #ddd
+      line-height 40px
+      thead, tfoot
+        background #eee
+      .thumb
+        width 100px
+      td
+        padding 10px 0
+        line-height 24px
+        vertical-align middle
+      tfoot p
+        text-align left
+        text-indent 2em
+
+  .sure-exchange
+    width: 240px
+    text-align: center
+    margin-top: 15px
+    font-size: 16px
+    background: #c2100b
+    padding: 8px 18px
+    border-radius: 4px
+    display: inline-block
+    color: #fff
+    transition: all .3s
+
+

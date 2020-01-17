@@ -1,0 +1,75 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.mask
+  position: fixed
+  z-index 999
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: rgba(0, 0, 0, .7)
+
+.menu-wrapper
+  position fixed
+  z-index 9999
+  right: 0
+  top: 0
+  width: 70%
+  height: 100%
+  padding-bottom 40px
+  overflow auto
+  background: $color-gray-background
+  color $color-light
+  .tab-header
+    background #ddd
+    padding 10px
+
+  .tab-content
+    padding 10px
+    overflow auto
+  .common-type
+    border-bottom 1px solid $color-border-gray
+    margin-bottom 15px
+    &:last-child
+      margin-bottom 0
+      border 0
+    .tit
+      font-size 16px
+      margin-bottom 10px
+    .item-list
+      clearfix()
+      .item
+        float left
+        width 48.5%
+        margin-right 3%
+        margin-bottom 10px
+        background #eee
+        line-height 30px
+        text-align center
+        border-radius 15px
+        border 1px solid transparent
+        &:nth-of-type(2n)
+          margin-right 0
+        &.active
+          background transparent
+          border 1px solid $color-blue-mobile
+
+  .bottom
+    position fixed
+    right 0
+    bottom 0
+    width 70%
+    line-height 40px
+    color $color-text
+    display flex
+    text-align center
+    border-top 5px solid $color-gray-background
+    span
+      flex 1
+      background #eee
+      &:last-child
+        background $color-blue-mobile
+        color $color-light
+

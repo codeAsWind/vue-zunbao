@@ -1,0 +1,270 @@
+@import "variable.styl"
+$radius-m-btn = 5px
+body, html
+  line-height: 1
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  //user-select: none 默认可选择文本
+  -webkit-tap-highlight-color: transparent
+  color: $color-text
+  background $color-lighter
+  font-size 14px
+
+*
+  box-sizing border-box
+
+.wrapper
+  width: 1200px
+  margin: 0 auto
+
+.m-wrapper
+  width 100%
+  padding 0 10px
+
+a
+  color $color-text
+  transition all .3s ease-in
+  &:hover
+    opacity .85
+
+.center
+  text-align center
+  margin 0 auto
+
+.left
+  text-align left
+
+img
+  vertical-align middle
+
+input, button, select
+  outline none
+
+input, select, textarea
+  height: 34px
+  line-height 34px
+
+  padding: 6px 12px
+  color: #555
+  background-color: #fff
+  background-image: none
+  border: 1px solid #ccc
+  border-radius: 4px
+  //box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+
+input[type=checkbox]
+  height 13px
+
+textarea
+  height 150px
+
+input[readonly]
+  background $color-gray-background
+
+input:focus, select:focus, textarea:focus
+  border-color: #66afe9
+  outline: 0
+
+//box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+
+input::-webkit-input-placeholder /*WebKit browsers*/
+  color #bbb
+
+.style-btn
+  line-height 32px
+  border 1px solid $color-intersperse
+  color $color-intersperse
+  display inline-block
+  width 100px
+  text-align center
+  border-radius $radius-m-btn
+  transition all .2s ease-in
+  background transparent
+  cursor pointer
+  &:hover
+    opacity .85
+
+.dialog-header
+  background: $color-primary
+  color: #fff
+  line-height 50px
+  text-align center
+  h3
+    font-size 16px
+
+.dialog-body
+  padding: 30px
+
+.el-carousel
+  width 100%
+  top -1px
+
+.el-carousel__indicator
+  button
+    color $color-text
+  &.is-active
+    button
+      background $color-intersperse
+      color $color-light
+
+.el-carousel__button
+  opacity 1
+  height 4px
+
+.el-button
+  font-size 16px
+  a, span
+    display block
+    width 100%
+    height 100%
+
+.small-btn
+  font-size 14px
+
+// input输入框组
+.address-dialog
+  .input-group select
+    width 100px
+
+.input-group
+  display flex
+  align-items center
+  margin-bottom 15px
+  input[type=text], input[type=password], select, textarea
+    width 240px
+  .label
+    flex 0 0 140px
+    display block
+    width 140px
+    text-align right
+    span
+      color $color-danger
+  .label + div
+    margin 0 15px
+  .deposit-btn-group
+    clearfix()
+  .jiuAn-wallet
+    h3
+      font-size 18px
+      .margin
+        margin 0 8px
+      a
+        margin-left 20px
+        text-decoration underline
+        line-height 30px
+
+  .actual-account
+    .red
+      line-height 30px
+
+.tips
+  margin-top 20px
+  line-height 30px
+  h3
+    color $color-primary
+    font-weight 600
+    font-size 16px
+
+// 移动端
+.mobile-input-group
+  margin-bottom 10px
+  label, input
+    display block
+    width 100%
+    margin-bottom 10px
+  .code
+    position relative
+    img
+      position absolute
+      right 7px
+      top 7px
+
+
+//右侧边框
+.border-content
+  border 1px solid $color-primary
+  border-top 0
+  padding 30px
+
+.color-intersperse
+  color $color-intersperse
+
+.red
+  color $color-danger
+
+.link
+  color $color-link
+
+.light
+  color $color-light
+
+//日期插件
+.el-date-editor.el-input .el-input__icon
+  //margin-top -3px
+  //弹框字体
+.el-message-box p, .el-dialog__body, .el-message-box__content
+  font-size 16px
+  line-height 32px
+
+.el-message
+  top 120px
+
+//loading
+.el-loading-spinner i, .el-loading-spinner .el-loading-text
+  color $color-light
+
+//表格
+.table
+  &.my-table
+    margin-bottom 15px
+    tr
+      &:hover
+        background #f5f7fa
+      &:nth-of-type(2n)
+        background #fafafa
+    td, th
+      line-height 24px
+    td
+      border 1px solid $color-border-gray
+  table
+    width 100%
+    text-align center
+    thead
+      th
+        background $color-nav-background
+        color $color-light
+        border-right-color $color-nav-background
+    td, th
+      vertical-align middle
+      padding 10px
+      text-align center
+
+  .el-table table td, .el-table table th
+    padding 10px 0
+
+  .el-table__header thead, .el-table__header th
+    text-align center
+
+.split
+  display block
+  padding-top 20px
+
+.service-answer
+  h3
+    color $color-dark
+    margin-bottom 5px
+    font-weight 600
+  p
+    margin-bottom 10px
+
+@media screen and (max-width: 767px)
+  body, html
+    background $color-light
+
+  .wrapper
+    width 100%
+    padding 0 10px
+
+//toast
+.mint-toast-text
+  line-height 21px

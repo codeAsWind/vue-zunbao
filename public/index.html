@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <span id="TMDbug">&nbsp;</span>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script>
+    //  ico bug
+    var bug = document.querySelector('#TMDbug')
+    bug.parentNode.removeChild(bug)
+
+    //统计代码
+    var _hmt = _hmt || [];
+    !function () {
+      if (window.location.host.indexOf('zb416.com') != -1) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b0d7e3ecc2f0131f06be09c99b395180";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      }
+    }();
+
+    // 加载动画
+    window.onload = function () {
+      document.querySelector('#app').style.display = 'block'
+      document.querySelector('.loading-wrapper').style.display = 'none'
+    }
+
+  </script>
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <!--启动动画-->
+  <link rel="stylesheet" href="<%= BASE_URL %>loading.css">
+  <!--阿里图标-->
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_840468_acm45m082jh.css">
+  <title>尊宝国际</title>
+
+</head>
+<body>
+<!--loading-->
+<div class="loading-wrapper">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<noscript>
+  <strong>We're sorry but ldpc doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app" style="display: none"></div>
+<!-- built files will be auto injected -->
+
+</body>
+</html>
